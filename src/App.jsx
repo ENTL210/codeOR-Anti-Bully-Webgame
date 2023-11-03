@@ -1,12 +1,18 @@
-import { React } from 'react'
+import { React, useState } from 'react'
+import { Container, GlobalStyle} from "./AppStyle"
+import NavigationBar from './components/NavigationBar'
+import Menu from './components/Menu'
+
 
 function App() {
+  const [isTabActive, setIsActive] = useState(false)
   
-
   return (
-    <>
-      Hello, World!
-    </>
+    <Container>
+      <GlobalStyle />
+      <NavigationBar state={isTabActive} setState={() => { setIsActive(prevState => !prevState) }} />
+      <Menu state={isTabActive} setState={() => {setIsActive(prevState => !prevState)}}/>
+    </Container>
   )
 }
 
