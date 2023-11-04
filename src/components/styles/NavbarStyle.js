@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 
 const Wrapper = styled.div`
     width: 100%;
-    background: #006D77;
+    background: #001524;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

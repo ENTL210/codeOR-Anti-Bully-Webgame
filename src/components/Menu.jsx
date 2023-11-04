@@ -26,12 +26,13 @@ export default function Menu({ state, setState, currentTab, setCurrentTab }) {
                     color: "#EDF6F9"
                 }}
                 animate={{
-                    color: currentTab === items.path ? "#006D77" : "#EDF6F9"
+                    color: currentTab === items.path ? "#FFECD1" : "#EDF6F9"
                 }}
-                whileHover={{ color: "#006D77", borderRadius: 15 }}
+                whileHover={{ color: "#FFECD1", borderRadius: 15 }}
                 onClick={() => {
                     setCurrentTab(items.path)
                     navigate(items.path)
+                    setState()
                     
                 }}
             >

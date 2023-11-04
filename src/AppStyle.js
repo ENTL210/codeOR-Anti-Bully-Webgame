@@ -4,8 +4,7 @@ import {motion} from "framer-motion"
 
 const Container = styled.div`
 width: 100%;
-height: 100%;
-background: #83C5BE;
+background: rgba(248, 141, 39, 0.8);
 `
 const GlobalStyle = createGlobalStyle`
   body {
