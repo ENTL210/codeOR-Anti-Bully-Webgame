@@ -24,10 +24,10 @@ const Wrapper = styled.div`
 	border: none;
 	padding: 10px;
 	font: inherit;
-	cursor: pointer;
 	outline: inherit;
     img {
         width: 35px;
+        cursor: pointer;
     }
     `
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { Wrapper, MinimizeTab, Tab } from "./styles/MenuStyle"
 import xMark from "../assets/x-mark.png"
+import pageData from "../pageData";
+import { useNavigate } from "react-router-dom";
 
 export default function Menu({ state, setState, currentTab, setCurrentTab }) {
     const hamburgerAnimation = {
@@ -13,6 +15,30 @@ export default function Menu({ state, setState, currentTab, setCurrentTab }) {
             x: "100%"
         },
     }
+
+    const navigate = useNavigate()
+
+    const tabs = pageData.map(items => {
+        return (
+            <Tab
+                key={items.id}
+                initial={{ 
+                    color: "#EDF6F9"
+                }}
+                animate={{
+                    color: currentTab === items.path ? "#006D77" : "#EDF6F9"
+                }}
+                whileHover={{ color: "#006D77", borderRadius: 15 }}
+                onClick={() => {
+                    setCurrentTab(items.path)
+                    navigate(items.path)
+                    
+                }}
+            >
+                {items.title}
+            </Tab>
+        )
+    })
 
     return (
         <Wrapper
@@ -27,30 +53,7 @@ export default function Menu({ state, setState, currentTab, setCurrentTab }) {
                 }} />
             </MinimizeTab>
 
-            <Tab 
-                initial={{ background: "none" }} 
-                whileHover={{ background: "#e0a08b", borderRadius: 10 }}
-            >
-                Home
-            </Tab>
-            <Tab
-                initial={{ background: "none" }} 
-                whileHover={{ background: "#e0a08b", borderRadius: 10 }}
-            >
-                Our Mission
-            </Tab>
-            <Tab
-                initial={{ background: "none" }} 
-                whileHover={{ background: "#e0a08b", borderRadius: 10 }}
-            >
-                Get Help
-            </Tab>
-            <Tab
-                initial={{ background: "none" }} 
-                whileHover={{ background: "#e0a08b", borderRadius: 10 }}
-            >
-                Learn More
-            </Tab>
+            {tabs}
         </Wrapper>
     )
 }
