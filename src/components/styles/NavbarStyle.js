@@ -16,6 +16,7 @@ const Wrapper = styled.div`
     font-weight: 800;
     color: #EDF6F9;
     padding: 10px;
+    cursor: pointer;
     `
 
     const Tab = styled(motion.button)`

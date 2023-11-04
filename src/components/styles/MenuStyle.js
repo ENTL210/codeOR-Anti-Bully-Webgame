@@ -21,7 +21,7 @@ const expandHeight = keyframes`
 
 const Wrapper = styled(motion.div)`
 position: absolute;
-right:0;
+right: 0;
 top: 0;
 min-height: 100%;
 background: #15616D;

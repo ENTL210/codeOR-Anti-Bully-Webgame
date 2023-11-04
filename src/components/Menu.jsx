@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Menu({ state, setState, currentTab, setCurrentTab }) {
     const hamburgerAnimation = {
         open: {
+            display: "flex",
             opacity: 1,
             x: 0,
         },
@@ -43,7 +44,7 @@ export default function Menu({ state, setState, currentTab, setCurrentTab }) {
 
     return (
         <Wrapper
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, display:"none" }}
             animate={state ? "open" : "closed"}
             transition={{ type: "tween", ease: "easeInOut", duration: 0.5 }}
             variants={hamburgerAnimation}

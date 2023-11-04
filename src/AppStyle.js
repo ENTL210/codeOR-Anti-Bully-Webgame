@@ -3,7 +3,6 @@ import {motion} from "framer-motion"
 
 
 const Container = styled.div`
-width: 100%;
 background: rgba(248, 141, 39, 0.8);
 `
 const GlobalStyle = createGlobalStyle`

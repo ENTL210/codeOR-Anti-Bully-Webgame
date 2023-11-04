@@ -7,17 +7,17 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 5px;
+padding: 10px;
 gap: 10px;
 color: #001524;
 `
 
 const Title = styled.h1`
-font-size: 3rem;
+font-size: clamp(1rem, 10vw, 3rem);
 `
 
 const SubTitle = styled.h2`
-font-size: 2.4rem;
+font-size: clamp(0.5rem, 6vw, 2.2rem);
 line-height: 0;
 `
 
@@ -47,7 +47,7 @@ a:hover {
 `
 
 const BodyText = styled.p`
-font-size: 2rem;
+font-size: clamp(1.5rem, 4vw, 2.2rem);
 line-height: 1.2;
 min-width: 15ch;
 max-width: 70ch;
@@ -60,7 +60,7 @@ const UnorderedList = styled.ul`
 `
 
 const ListItem = styled.li`
-font-size: 2rem;
+font-size: clamp(1.5rem, 4vw, 2.2rem);
 line-height: 1.3;
 min-width: 15ch;
 max-width: 70ch;

@@ -10,7 +10,18 @@ export default function Homepage() {
         codeUrl: "",
     })
     return (
-        <Container>
+        <Container
+        initial={{
+            opacity: 0,
+        }}
+        animate={{
+            opacity: 1,
+        }}
+        transition={{
+            ease: "easeInOut",
+            duration: 0.2
+        }}
+        >
             {/* <Unity unityProvider={UnitProvider}/> */}
         </Container>
     )
