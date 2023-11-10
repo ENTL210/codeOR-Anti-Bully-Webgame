@@ -1,14 +1,16 @@
-import React from "react";
-import { Container } from "./pageStyle";
+import React, {useState, useEffect} from "react";
+import { Container} from "./pageStyle";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
+
 export default function Homepage() {
-    const {UnitProvider} = useUnityContext({
-        loaderUrl: "",
-        dataUrl: "",
-        frameworkUrl: "",
-        codeUrl: "",
+    const {unityProvider} =  useUnityContext({
+        loaderUrl: "/game/game.loader.js",
+        dataUrl: "/game/game.data",
+        frameworkUrl: "/game/game.framework.js",
+        codeUrl: "/game/game.wasm"
     })
+
     return (
         <Container
         initial={{
@@ -21,8 +23,16 @@ export default function Homepage() {
             ease: "easeInOut",
             duration: 0.2
         }}
+        style={{
+            justifyContent: "center",
+            alignItems: "center"
+        }}
         >
-            {/* <Unity unityProvider={UnitProvider}/> */}
+            <Unity 
+            style={{width: 960, height: 600}} 
+            unityProvider={unityProvider}
+            devicePixelRatio={window.devicePixelRatio}
+            />
         </Container>
     )
 }

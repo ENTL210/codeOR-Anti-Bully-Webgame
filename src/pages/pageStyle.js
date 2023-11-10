@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {motion} from "framer-motion"
+import { Unity } from "react-unity-webgl";
 
 const Container = styled(motion.div)`
 min-height: 100vh;
@@ -10,6 +11,8 @@ align-items: flex-start;
 padding: 10px;
 gap: 10px;
 color: #001524;
+overflow: scroll;
+
 `
 
 const Title = styled.h1`
