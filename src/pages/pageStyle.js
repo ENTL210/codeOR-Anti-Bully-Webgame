@@ -13,6 +13,7 @@ gap: 10px;
 color: #001524;
 overflow: scroll;
 
+
 `
 
 const Title = styled.h1`
@@ -70,6 +71,48 @@ max-width: 70ch;
 font-weight: 500;
 `
 
+const GameCanvas = styled(motion.div)`
+width: 80vw;
+height: 80vh;
+background-color: rgb(143, 141, 141, 0.5);
+flex-direction: column;
+align-items:center;
+justify-content: space-evenly;
+border-radius: 10px;
+gap: 10px;
+`
+
+const Game = styled(motion(Unity))`
+width: 96%;
+height: 82%;
+`
+
+const LoaderWrapper = styled.div`
+width: 75vw;
+height: 50px;
+border-radius: 20px;
+background-color: rgb(143, 141, 141, 0.5);
+overflow: hidden;
+`
+
+const Loader = styled(motion.div)`
+background-color: #001524;
+width: ${props => props.width};
+max-width: 100%;
+height: 100%;
+`
+
+const FullscreenBtn = styled(motion.button)`
+border: none;
+cursor: pointer;
+background: none;
+
+img {
+    width: 25px;
+    height: 25px;
+}
+`
+
 export {
     Container,
     Title,
@@ -80,4 +123,9 @@ export {
     ImageCaption,
     UnorderedList,
     ListItem,
+    GameCanvas,
+    Game,
+    LoaderWrapper,
+    Loader,
+    FullscreenBtn
 }

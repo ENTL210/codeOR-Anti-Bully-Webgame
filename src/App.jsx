@@ -10,7 +10,7 @@ import LearMorePage from './pages/LearnMore'
 
 function App() {
   const [isTabActive, setIsActive] = useState(false)
-  const [tab, setTab] = useState("")
+  const [tab, setTab] = useState("/home")
 
   return (
     <Container>
